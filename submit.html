@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Submit Article - NSBM NewsDesk</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <div class="form-box wide">
+    <h2 class="title">Submit an Article</h2>
+    <div id="msg"></div>
+    <form id="submitForm" enctype="multipart/form-data">
+      <label>Title</label><input type="text" name="title" required>
+      <label>Category</label><select name="category_id" id="category_id"></select>
+      <label>Picture (optional)</label>
+      <input type="file" name="image" id="image" accept="image/*">
+      <img id="preview" alt="" style="display:none;max-width:200px;margin-top:10px;border-radius:6px">
+      <label>Content</label><textarea name="content" required></textarea><br><br>
+      <button class="btn" type="submit">Submit for Approval</button>
+    </form>
+  </div>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/submit.js"></script>
+</body>
+</html>
