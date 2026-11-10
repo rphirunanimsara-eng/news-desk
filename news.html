@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All News - NSBM NewsDesk</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <div class="container">
+    <h2 class="title">News</h2>
+    <form class="filters" method="get" action="news.html">
+      <input type="text" name="q" id="q" placeholder="Search...">
+      <select name="cat" id="cat"><option value="0">All Categories</option></select>
+      <input type="date" name="date" id="date">
+      <button class="btn" type="submit">Filter</button>
+      <a class="btn btn-grey" href="news.html">Reset</a>
+    </form>
+    <div class="grid" id="news-list"></div>
+  </div>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/news.js"></script>
+</body>
+</html>
