@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Article - NSBM NewsDesk</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <div class="container article">
+    <div id="article"></div>
+
+    <h2 class="title">Comments</h2>
+    <form id="commentForm" style="display:none">
+      <textarea name="body" style="min-height:80px" placeholder="Write a comment..." required></textarea><br><br>
+      <button class="btn" type="submit">Post Comment</button><br><br>
+    </form>
+    <p id="loginNote" style="display:none"><a href="login.html">Login</a> to comment.<br><br></p>
+    <div id="comments"></div>
+  </div>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/article.js"></script>
+</body>
+</html>
