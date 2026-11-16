@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin - NSBM NewsDesk</title>
+        <link rel="stylesheet" href="../assets/css/style.css">
+    </head>
+    <body>
+        <div class="admin-wrap">
+
+              <div class="admin-side">
+                <h3>NSBM NewsDesk</h3>
+                <a href="#" data-tab="dashboard">Dashboard</a>
+                <a href="#" data-tab="articles">News Articles</a>
+                <a href="#" data-tab="form">+ Add New Article</a>
+                <a href="#" data-tab="categories">Categories</a>
+                <a href="#" data-tab="announcements">Announcements</a>
+                <a href="#" data-tab="comments">Comments</a>
+                <a href="../index.html">View Website</a>
+                <a href="#" id="adminLogout">Logout</a>
+              </div>
+
+        <div class="admin-main">
+
+             <!-- Dashboard -->
+              <div class="tab" id="tab-dashboard">
+                <h2 class="title">Dashboard</h2>
+                <div class="stats" id="stats"></div>
+                <button class="btn" id="btnNew">+ Create New Article</button>
+              </div>
+
+             <!-- Articles list -->
+              <div class="tab" id="tab-articles" style="display:none">
+                <h2 class="title">News Articles</h2>
+                <table>
+                <tr><th>Title</th><th>Category</th><th>Status</th><th>Date</th><th>Actions</th></tr>
+                <tbody id="articleRows"></tbody>
+                </table>
+              </div>
+
+             <!-- Add / edit article -->
+              <div class="tab" id="tab-form" style="display:none">
+               <h2 class="title" id="formTitle">Create New Article</h2>
+               <form id="articleForm" class="form-box wide" style="margin:0" enctype="multipart/form-data">
+               <input type="hidden" name="id" id="f_id">
+               <label>Article Title</label><input type="text" name="title" required>
+               <label>Category</label><select name="category_id" id="f_category"></select>
+               <label>Status</label>
+               <select name="status">
+                <option>published</option><option>draft</option><option>pending</option><option>rejected</option>
+               </select>
+        <label><input type="checkbox" name="featured"> Featured</label>
+        <label><input type="checkbox" name="breaking"> Breaking News</label>
+        <label>Cover Image (PNG/JPG, max 5MB)</label>
+        <img id="curImg" alt="" style="display:none;width:150px;margin-bottom:8px;border-radius:6px">
+        <input type="file" name="image" id="f_image" accept="image/*">
+        <label>Short Summary</label><input type="text" name="excerpt" maxlength="200">
+        <label>Article Content</label><textarea name="content" required></textarea><br><br>
+        <button class="btn" type="submit">Save Article</button>
+      </form>
+    </div>
+
+    <!-- Categories -->
+    <div class="tab" id="tab-categories" style="display:none">
+      <h2 class="title">Categories</h2>
+      <form id="categoryForm" class="filters">
+        <input type="text" name="name" placeholder="New category name" required>
+        <button class="btn" type="submit">Add</button>
+      </form>
+      <table><tr><th>Name</th><th>Action</th></tr><tbody id="categoryRows"></tbody></table>
+    </div>
+
+    <!-- Announcements -->
+    <div class="tab" id="tab-announcements" style="display:none">
+      <h2 class="title">Announcements</h2>
+      <form id="announcementForm" class="filters">
+        <input type="text" name="title" placeholder="New announcement" style="width:350px" required>
+        <button class="btn" type="submit">Add</button>
+      </form>
+      <table><tr><th>Announcement</th><th>Date</th><th>Action</th></tr><tbody id="announcementRows"></tbody></table>
+    </div>
+
+    <!-- Comments -->
+    <div class="tab" id="tab-comments" style="display:none">
+      <h2 class="title">Moderate Comments</h2>
+      <table><tr><th>User</th><th>Article</th><th>Comment</th><th>Action</th></tr><tbody id="commentRows"></tbody></table>
+    </div>
+
+  </div>
+</div>
+
+<script src="../assets/js/layout.js"></script>
+<script src="../assets/js/admin.js"></script>
+</body>
+</html>
+
+
+
+
+       
+
+
